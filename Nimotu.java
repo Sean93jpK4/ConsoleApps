@@ -1,5 +1,6 @@
 import java.util.Scanner;
 
+//作りかけ
 public class Nimotu{
 
 
