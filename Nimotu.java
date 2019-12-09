@@ -28,8 +28,6 @@ public class Nimotu{
 
             String tmp;        
                 
-
-
             switch(operat){
                 case "w":
                     if(field[ypl-1][xpl].equals("o")){
@@ -75,6 +73,9 @@ public class Nimotu{
                     field[ypl][xpl] = tmp;
                     xpl = xpl - 1;
                     break;
+            }
+            if((field[1][2] != ".") && (field[1][3] != ".")){
+                break;
             }
         }while(true);
     }
