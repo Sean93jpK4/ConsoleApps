@@ -75,6 +75,7 @@ public class Nimotu{
                     break;
             }
             if((field[1][2] != ".") && (field[1][3] != ".")){
+                System.out.println("Congrats!");
                 break;
             }
         }while(true);
