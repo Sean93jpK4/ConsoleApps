@@ -1,8 +1,6 @@
 import java.util.Scanner;
 
-//作りかけ
 public class Nimotu{
-
 
     public static void main(String[] args){
 
@@ -34,24 +32,44 @@ public class Nimotu{
 
             switch(operat){
                 case "w":
+                    if(field[ypl-1][xpl].equals("o")){
+                        break;
+                    }else if(field[ypl-1][xpl].equals(".")){
+                        field[ypl-1][xpl] = " ";
+                    }
                     tmp = field[ypl-1][xpl];
                     field[ypl-1][xpl]  = field[ypl][xpl];
                     field[ypl][xpl] = tmp;
                     ypl = ypl-1;
                     break;
                 case "s":
+                    if(field[ypl+1][xpl].equals("o")){
+                        break;
+                    }else if(field[ypl+1][xpl].equals(".")){
+                        field[ypl+1][xpl] = " ";
+                    }
                     tmp = field[ypl+1][xpl];
                     field[ypl+1][xpl]  = field[ypl][xpl];
                     field[ypl][xpl] = tmp;
                     ypl = ypl+1;
                     break;
                 case "d":
+                    if(field[ypl][xpl+1].equals("o")){
+                        break;
+                    }else if(field[ypl][xpl+1].equals(".")){
+                        field[ypl][xpl+1] = " ";
+                    }
                     tmp = field[ypl][xpl+1];
                     field[ypl][xpl+1]  = field[ypl][xpl];
                     field[ypl][xpl] = tmp;
                     xpl = xpl + 1;
                     break;
                 case "a":
+                    if(field[ypl][xpl-1].equals("o")){
+                        break;
+                    }else if(field[ypl][xpl-1].equals(".")){
+                        field[ypl][xpl-1] = " ";
+                    }
                     tmp = field[ypl][xpl-1];
                     field[ypl][xpl-1]  = field[ypl][xpl];
                     field[ypl][xpl] = tmp;
@@ -61,3 +79,4 @@ public class Nimotu{
         }while(true);
     }
 }
+
